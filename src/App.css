@@ -1,0 +1,62 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #ffdfba, #ff9f1a);
+  font-family: Arial, sans-serif;
+}
+
+.gift-box {
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  animation: pump 1.5s infinite;
+}
+
+@keyframes pump {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.message {
+  margin-top: 20px;
+  font-size: 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.first-message {
+  color: #6b210c;
+  animation: fadeInOut 1s;
+}
+
+.subsequent-message {
+  color:black;
+  font-size:large;
+  margin: 10px 0; /* Adds space between paragraphs */
+  line-height: 1.6;
+  font-style: italic;
+  animation: fadeInOut 1s;
+  position: relative; 
+  top: -50px;
+}
+
+.subsequent-message:last-child {
+  cursor: default; /* Ensures no pointer cursor on the last message */
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
